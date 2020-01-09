@@ -18,9 +18,6 @@ For this we need 3 VMs for Rancher and 3 VMs for a Kubernetes Cluster we want to
 
 Make sure you can login into all of the VMs. All the VMs are provisioned on cloudscale.ch and are based on CentOS.
 
-
-
-
 ---
 
 **End of Lab 1.1**
