@@ -27,7 +27,7 @@ Select all Node Roles, as for this ops-techlab we are not going to use dedicated
 
 You can now use the show `docker run...` command to add your nodes to the Kubernetes Cluster.
 
-Login into your `userX-k8snode[1-3]` VMs and execute the docker command on each VM.
+Login into your `userX-k8snode[1-2]` VMs and execute the docker command on each VM. Don't add `userX-k8snode3` yet, as we wanna add this node later.
 
 Your cluster is now beeing provisioned. Observe the Messages show in the Rancher Control Plane webgui and wait until you cluster is fully ready.
 
