@@ -22,12 +22,6 @@ nodes:
     role: [controlplane,worker,etcd]
 
 kubernetes_version: "v1.14.9-rancher1-1"
-
-services:
-  etcd:
-    snapshot: true
-    creation: 6h
-    retention: 24h
 ```
 
 ### Create the Kubernetes Cluster

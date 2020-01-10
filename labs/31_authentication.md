@@ -13,6 +13,6 @@ You can try to enable [GitHub Authnentication](https://rancher.com/docs/rancher/
 
 **End of Lab 3.1**
 
-<p width="100px" align="right"><a href="32_usermanagement.md"> User Management →</a></p>
+<p width="100px" align="right"><a href="32_usermanagement.md"> 3.2 User Management →</a></p>
 
 [← back to the Chapter Overview](10_rancher.md)

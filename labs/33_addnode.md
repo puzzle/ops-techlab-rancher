@@ -14,6 +14,6 @@ Choose the "Node Role" you wan't to use. For this lab, we wanna add a new worker
 
 **End of Lab 3.3**
 
-<p width="100px" align="right"><a href="34_updatenodes.md"> Update Nodes→</a></p>
+<p width="100px" align="right"><a href="34_updatenodes.md"> 3.4 Update Nodes→</a></p>
 
 [← back to the Chapter Overview](10_rancher.md)
