@@ -27,6 +27,7 @@ On the "tools/Snapshot" all existing etcd snapshots are listed:
 
 From there you can also delete existing snapshots.
 
+**End of Lab 4.3**
 
 ---
 

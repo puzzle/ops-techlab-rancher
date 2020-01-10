@@ -5,16 +5,14 @@ This first chapter gives an overview of the Rancher Achritecture and how to inst
 
 ## Chapter Content
 
-* [4.1: Rancher Server Backup](41_backup.md)
-* [4.2: Rancher Server Restoration](42_restore.md)
-* [4.3: Backing up a Rancher Launched Kubernetes Cluster](43_backupcluster.md)
-* [4.4: Restoring Rancher Launched Kubernetes Cluster](44_restorecluster.md)
-* [4.5: Backup Volumes](45_backupvolumes.md)
+* [5.1: Rancher Cluster Monitoring](51_clustermonitoring.md)
+* [5.2: Rancher Project Monitoring](52_projectmonitoring.md)
+* [5.3: Logging](53_logging.md)
 
 
 
 ---
 
-<p width="100px" align="right"><a href="41_backup.md">4.1 Rancher Server Backup →</a></p>
+<p width="100px" align="right"><a href="51_clustermonitoring.md">5.1 Rancher Cluster Monitoring →</a></p>
 
 [← back to the Labs Overview](../README.md)

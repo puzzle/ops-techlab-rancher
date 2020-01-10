@@ -77,7 +77,41 @@ velero backup create mybackup
 
 You can verify your backup with `velero backup get` or show details with `velero backup describe mybackup --details`
 
+This backup did not yet include any persistent volumes. You have to annotate all pods with volumes to be backuped with the following:
+
+```
+backup.velero.io/backup-volumes=pvc-volume
+```
+
+then the volume with name `pvc-volume` will be backuped with restic.
+
+Example Pod with annotation for velero:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample
+  namespace: foo
+  annotations:
+    backup.velero.io/backup-volumes=pvc-volume
+spec:
+  containers:
+  - image: k8s.gcr.io/test-webserver
+    name: test-webserver
+    volumeMounts:
+    - name: pvc-volume
+      mountPath: /volume-1
+  volumes:
+  - name: pvc-volume
+    persistentVolumeClaim:
+      claimName: test-volume-claim
+
+```
+
 ## Restore from a backup
+
+**End of Lab 4.5**
 
 ---
 

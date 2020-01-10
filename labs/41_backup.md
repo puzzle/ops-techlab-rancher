@@ -55,7 +55,7 @@ rke etcd snapshot-save --name <SNAPSHOT.db> --config rancher-cluster.yml
 
 Make sure to run the command in the same directory as your `rancher-cluster.yml` file.
 
-
+**End of Lab 4.1**
 
 ---
 

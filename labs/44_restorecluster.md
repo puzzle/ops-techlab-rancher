@@ -12,6 +12,8 @@ A etcd snapshot can be restored via the Rancher web gui:
 
 ![Restore Snapshop](../resources/images/restoresnapshot.png)
 
+**End of Lab 4.4**
+
 ---
 
 <p width="100px" align="right"><a href="45_backupvolumes.md">4.5 Backup Volumes →</a></p>

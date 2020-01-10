@@ -12,6 +12,7 @@ The etcd snapshot is restored again with `rke`:
 rke etcd snapshot-restore --name <snapshot>.db --config ./rancher-cluster-restore.yml
 ```
 
+**End of Lab 4.2**
 
 ---
 
