@@ -44,6 +44,6 @@ kubectl uncordon userX-k8snode3
 
 **End of Lab 3.4**
 
-<p width="100px" align="right"><a href="35_certificaterotation"> 3.4 Certificate Rotation →</a></p>
+<p width="100px" align="right"><a href="35_certificaterotation.md"> 3.4 Certificate Rotation →</a></p>
 
 [← back to the Chapter Overview](10_rancher.md)
