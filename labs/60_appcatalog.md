@@ -11,7 +11,7 @@ For more details, check the [Rancher Documentation](https://rancher.com/docs/ran
 ## Chapter Content
 
 * [6.1: Deploy an App](61_deployapp.md)
-* [6.2: Upgrade an App](62_projectmonitoring.md)
+* [6.2: Upgrade an App](62_upgradeapp.md)
 * [6.3: Use your own Helm Charts](63_helmcharts.md)
 
 

@@ -1,6 +1,6 @@
 # Lab 5: Monitoring and Logging
 
-This first chapter gives an overview of the Rancher Achritecture and how to install Rancher into your environment.
+Rancher contains a variety of tools that aren’t included in Kubernetes to assist in your DevOps operations. Rancher can integrate with external services to help your clusters run more efficiently.
 
 
 ## Chapter Content
