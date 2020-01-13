@@ -29,6 +29,6 @@ Click on Save to rotate the certificates. Again, beaware, after the certificates
 **End of Lab 3.5**
 
 
-<p width="100px" align="right"><a href="36_backuprestore.md"> 3.6 Persistent Storage→</a></p>
+<p width="100px" align="right"><a href="36_persistentstorage.md"> 3.6 Persistent Storage→</a></p>
 
 [← back to the Chapter Overview](10_rancher.md)

@@ -59,6 +59,6 @@ Make sure to run the command in the same directory as your `rancher-cluster.yml`
 
 ---
 
-<p width="100px" align="right"><a href="41_restore.md">4.2 Rancher Server Restoration →</a></p>
+<p width="100px" align="right"><a href="42_restore.md">4.2 Rancher Server Restoration →</a></p>
 
 [← back to the Labs Overview](../README.md)

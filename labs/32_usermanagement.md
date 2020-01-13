@@ -31,6 +31,6 @@ You can now login as the new user and then have access to the selected project i
 
 **End of Lab 3.2**
 
-<p width="100px" align="right"><a href="33_addnodes.md"> 3.3 Add Nodes→</a></p>
+<p width="100px" align="right"><a href="33_addnode.md"> 3.3 Add Nodes→</a></p>
 
 [← back to the Chapter Overview](10_rancher.md)

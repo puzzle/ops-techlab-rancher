@@ -56,6 +56,6 @@ Open a browser and go to https://[IP of userX-lb].xip.puzzle.ch and finish the i
 
 **End of Lab 1.4**
 
-<p width="100px" align="right"><a href="15_install.md">1.5 Lifecycle Kubernetes cluster for Rancher HA installation →</a></p>
+<p width="100px" align="right"><a href="15_lifecyclerke.md.md">1.5 Lifecycle Kubernetes cluster for Rancher HA installation →</a></p>
 
 [← back to the Chapter Overview](10_rancher.md)

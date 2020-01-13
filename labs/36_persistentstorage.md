@@ -42,6 +42,6 @@ Inside the Longhorn Webgui, you should see that the volume is getting attached a
 **End of Lab 3.6**
 
 
-<p width="100px" align="right"><a href="40_backuprestore.md"> Backup and Restore→</a></p>
+<p width="100px" align="right"><a href="40_backuprestore.md">4 Backup and Restore→</a></p>
 
 [← back to the Chapter Overview](10_rancher.md)
