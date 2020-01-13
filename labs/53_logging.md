@@ -34,7 +34,7 @@ See the [Rancher documentation](https://rancher.com/docs/rancher/v2.x/en/cluster
 
 ## Enable Cluster Logging
 
-As we don't have any suitable destinatoin for the logs in this lab setup, we are not going to enable the logging.
+As we don't have any suitable destination for the logs in this lab setup, we are not going to enable the logging.
 
 Rancher Cluster (or Project) Logging can be enabled via "Tools/Logging"
 
