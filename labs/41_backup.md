@@ -16,16 +16,16 @@ We are going to enable recuring snapshots on our kubernetes cluster. For this, c
 ```yaml
 nodes:
   - address: userX-rancher1.xip.puzzle.ch
-    user: centos
+    user: ansible
     role: [controlplane,worker,etcd]
   - address: userX-rancher2.xip.puzzle.ch
-    user: centos
+    user: ansible
     role: [controlplane,worker,etcd]
   - address: userX-rancher3.xip.puzzle.ch
-    user: centos
+    user: ansible
     role: [controlplane,worker,etcd]
 
-kubernetes_version: "v1.14.9-rancher1-1"
+kubernetes_version: "v1.16.3-rancher1-1"
 
 services:
   etcd:
@@ -53,7 +53,7 @@ The one-time snapshot is created with `rke`. Run the following command to create
 rke etcd snapshot-save --name <SNAPSHOT.db> --config rancher-cluster.yml
 ```
 
-Make sure to run the command in the same directory as your `rancher-cluster.yml` file.
+Make sure to run the command in the same directory as your `rancher-cluster.yml` file. You find the snapshot again in directory: `/opt/rke/etcd-snapshots/`.
 
 **End of Lab 4.1**
 

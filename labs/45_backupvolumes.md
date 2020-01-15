@@ -9,29 +9,46 @@ Velero can use [restic](https://restic.net/) to create backups from your Periste
 
 ## Install Minio as a S3 Object store for your Backup
 
-In order to use velero with a S3 Backup, we first are going to install [Minio](https://min.io/). We are going to install Minio via the Rancher App Catalog. Go to the App Catalog in your Kubernetes cluster and launch a new App. Search for minio.
+In order to use velero with a S3 Backup, we first are going to install [Minio](https://min.io/). We are going to install Minio via the Rancher App Catalog. For minio to be available inside the Rancher App Catalog, we have to enable the helm catalog. Go to your Global Rancher View -> Tools -> Catalog and enable the `helm` catalog. Rancher does then sync all the helm charts. 
+
+![Sync  Rancher App Catalog](../resources/images/syncrancherappcatalog.pngg)
+
+Go to the App Catalog in your Kubernetes cluster and launch a new App. Search for minio.
 
 ![Minio App](../resources/images/minioapp.png)
 
 Use the following anwers for your App:
 
 ```yaml
-#ingress:
-#  enabled: true
-#  hosts: tbd!!
+ingress:
+  enabled: true
+  hosts: 
+  - minio.[ip of k8snode1].xip.puzzle.ch
 replicas: 1
 accessKey: AKIAIOSFODNN7EXAMPLE
 secretKey: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-buckets:
-- velero
-
+defaultBucket:
+  enabled: true
+  name: velero
+  policy: none
+  purge: false
 ```
 
 **Note:** this is far away from a production setup! Don't use this in production!
 
 ## Install Velero
 
-The `velero` binary is already included on your vm's. Lets start with creating a new Namespace inside your default Rancher project. The name of the namespace should be `velero`:
+Download the `velero` binary.
+
+```
+wget https://github.com/vmware-tanzu/velero/releases/download/v1.2.0/velero-v1.2.0-linux-amd64.tar.gz
+tar xzf velero-v1.2.0-linux-amd64.tar.gz
+sudo mv velero-v1.2.0-linux-amd64/velero /usr/local/bin/
+velero --version
+```
+
+
+Lets start with creating a new Namespace inside your default Rancher project. The name of the namespace should be `velero`:
 
 ![Add Namespace](../resources/images/addnamespace.png)
 
@@ -51,10 +68,23 @@ aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
 this allows velero to store the backups in your Minio Installation.
 
+In order to work with `kubectl` on your `ops-techlab` kubernetes cluster, you have to download your `kube.config` file from the cluster dashboard.
+
+Then use `export KUBECONFIG=kube.config` to configure your kubeconfig for `kubectl`. Remember, it was previously set to the one from the Rancher Control Plane. Now you can work from your controller VM on your `ops-techlab` cluster:
+
+```
+kubectl get node
+NAME               STATUS   ROLES                      AGE   VERSION
+rancher-k8snode1   Ready    controlplane,etcd,worker   46m   v1.16.3
+rancher-k8snode2   Ready    controlplane,etcd,worker   42m   v1.16.3
+rancher-k8snode3   Ready    controlplane,etcd,worker   42m   v1.16.3
+```
+
+
 Then you can install velero on your kubernetes cluster with the following command:
 
 ```bash 
-velero install --provider aws --plugins velero/velero-plugin-for-aws:v1.0.0 --bucket pitc-k8s-staging-velero --secret-file ./credentials-velero --backup-location-config region=us-east-1,s3Url=https://TBD!!!! --use-restic --use-volume-snapshots=false
+velero install --provider aws --plugins velero/velero-plugin-for-aws:v1.0.0 --bucket velero --secret-file ./credentials-velero --backup-location-config region=us-east-1,s3Url=http://minio.minio.svc.cluster.local,s3ForcePathStyle=true,publicUrl=minio.[ip of k8snode1].xip.puzzle.ch --use-restic --use-volume-snapshots=false
 ```
 
 In your `velero` namespace you should now see a `velero` deployment and a `restic` daemonset.
@@ -62,9 +92,6 @@ In your `velero` namespace you should now see a `velero` deployment and a `resti
 ![Velero](../resources/images/verifyvelero.png)
 
 Velero is now ready to create backup of all your Kubernetes objects and also all your Persistent Volumes.
-
-
-
 
 
 ## Create a backup
@@ -109,7 +136,11 @@ spec:
 
 ```
 
+Try creating a Deployment with a PVC and make a backup of it.
+
 ## Restore from a backup
+
+TODO!
 
 **End of Lab 4.5**
 

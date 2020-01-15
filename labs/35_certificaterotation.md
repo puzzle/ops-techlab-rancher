@@ -23,7 +23,12 @@ And then you can select to rotate all certificates at once or only rotate indivi
 
 ![Rotate certificate - all services](../resources/images/rotatecertificatedialog.png)
 
-Click on Save to rotate the certificates. Again, beaware, after the certificates are rotated, the Kubernetes components are automatically restarted. You should do this inside a maintenance window.
+Click on Save to rotate the certificates. The cluster will go into update mode, wait until the cluster is ready again.
+
+
+Beaware, after the certificates are rotated, the Kubernetes components are automatically restarted. You should do this inside a maintenance window.
+
+
 
 
 **End of Lab 3.5**

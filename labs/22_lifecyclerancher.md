@@ -19,6 +19,12 @@ Rancher does start the upgrade process and will replace all the kubernetes compo
 **Note:** Upgrade a kubernetes version can also lead to upgrade of addons like CNI, DNS etc. Always check release notes and the [System Images](https://rancher.com/docs/rke/latest/en/config-options/system-images/) page or better [k8s_rke_system_images.go](https://github.com/rancher/kontainer-driver-metadata/blob/master/rke/k8s_rke_system_images.go) for details.
 
 
+![Cluster updating](../resources/images/waitclusterupdate.png)
+
+
+Wait again, until you cluster update is done.
+
+
 
 **End of Lab 2.2**
 

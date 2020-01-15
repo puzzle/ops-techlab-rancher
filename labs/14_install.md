@@ -53,7 +53,7 @@ replicaset.apps/cert-manager-webhook-75947c6ddc      1         1         1      
 ### Install Rancher Control Plane
 
 ```
-kubectl create namespace cattle-system
+$ kubectl create namespace cattle-system
 $ helm upgrade --install  \
   --namespace cattle-system \
   --set hostname=[IP of userX-lb].xip.puzzle.ch \

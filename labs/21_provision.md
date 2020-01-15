@@ -29,7 +29,10 @@ You can now use the show `docker run...` command to add your nodes to the Kubern
 
 Login into your `userX-k8snode[1-2]` VMs and execute the docker command on each VM. Don't add `userX-k8snode3` yet, as we wanna add this node later.
 
-Your cluster is now beeing provisioned. Observe the Messages show in the Rancher Control Plane webgui and wait until you cluster is fully ready.
+Your cluster is now beeing provisioned. Observe the Messages show in the Rancher Control Plane webgui and wait until you cluster is fully ready. This will take some minutes.
+
+![Kubernetes Cluster rwady](../resources/images/cluster_ready.png)
+
 
 **End of Lab 2.1**
 
