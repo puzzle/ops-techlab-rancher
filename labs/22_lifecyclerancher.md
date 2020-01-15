@@ -1,6 +1,6 @@
 ## Lab 2.2: Lifecycle Kubernetes Cluster
 
-In this lab we are going to upgrade our recently created kubernetes cluster to a newer kubernetes version. See also the official [documentation](https://rancher.com/docs/rancher/v2.x/en/cluster-admin/upgrading-kubernetes/) from Rancher.
+In this lab we are going to upgrade our recently created kubernetes cluster to a newer kubernetes version. See also the official [documentation](https://rancher.com/docs/rancher/v2.x/en/cluster-admin/upgrading-kubernetes/) from Rancher for more details.
 
 ## Upgrade Cluster
 
@@ -28,6 +28,6 @@ Wait again, until you cluster update is done.
 
 **End of Lab 2.2**
 
-<p width="100px" align="right"><a href="30_dailybusiness.md"> Daily Business →</a></p>
+<p width="100px" align="right"><a href="30_dailybusiness.md"> 3. Daily Business →</a></p>
 
 [← back to the Chapter Overview](10_rancher.md)

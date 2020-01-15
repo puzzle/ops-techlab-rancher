@@ -6,7 +6,7 @@ We now have a running kubernetes cluster and can deploy the Rancher Control Plan
 
 We need `https://charts.jetstack.io` for cert-manager and `https://releases.rancher.com/server-charts/`.
 
-```
+```bash
 $ helm repo add jetstack https://charts.jetstack.io
 $ helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 $ helm repo update
@@ -14,7 +14,7 @@ $ helm repo update
 
 ### Install cert-manager
 
-```
+```bash
 $ kubectl apply -f https://raw.githubusercontent.com/jetstack/cert-manager/release-0.9/deploy/manifests/00-crds.yaml
 $ kubectl create namespace cert-manager
 $ kubectl label namespace cert-manager certmanager.k8s.io/disable-validation=true
@@ -27,7 +27,7 @@ $ helm install \
 
 Verify with `kubectl -n cert-manager get all` that all the cert-manager pods are running and ready
 
-```
+```bash
 $kubectl -n cert-manager get all
 NAME                                           READY   STATUS    RESTARTS   AGE
 pod/cert-manager-769498897f-2w7mz              1/1     Running   0          24s
@@ -48,11 +48,9 @@ replicaset.apps/cert-manager-cainjector-6cc6c4d64d   1         1         1      
 replicaset.apps/cert-manager-webhook-75947c6ddc      1         1         1       24s
 ```
 
-
-
 ### Install Rancher Control Plane
 
-```
+```bash
 $ kubectl create namespace cattle-system
 $ helm upgrade --install  \
   --namespace cattle-system \
@@ -67,7 +65,7 @@ $ helm upgrade --install  \
 
 Wait until rollout complets, this can take some minutes:
 
-```
+```bash
 $ kubectl -n cattle-system rollout status deploy/rancher
 Waiting for deployment "rancher" rollout to finish: 0 of 3 updated replicas are available...
 Waiting for deployment "rancher" rollout to finish: 1 of 3 updated replicas are available...
@@ -77,8 +75,8 @@ deployment "rancher" successfully rolled out
 
 Verify all Rancher pods are running and ready.
 
-```
-kubectl -n cattle-system get all
+```bash
+$ kubectl -n cattle-system get all
 NAME                          READY   STATUS    RESTARTS   AGE
 pod/rancher-c57789b58-x25hz   0/1     Running   2          81s
 pod/rancher-c57789b58-xpqmm   1/1     Running   1          81s
@@ -106,6 +104,6 @@ Open a browser and go to https://[IP of userX-lb].xip.puzzle.ch and finish the i
 
 **End of Lab 1.4**
 
-<p width="100px" align="right"><a href="15_lifecyclerke.md.md">1.5 Lifecycle Kubernetes cluster for Rancher HA installation →</a></p>
+<p width="100px" align="right"><a href="15_lifecyclerke.md">1.5 Lifecycle Kubernetes cluster for Rancher HA installation →</a></p>
 
 [← back to the Chapter Overview](10_rancher.md)

@@ -1,7 +1,5 @@
 # Rancher OPS Techlab
 
-**Work In Progress**
-
 ## Introduction
 
 In the following guided and hands-on techlab we show the participants how to operate Rancher/Kubernetes Container Platform. The labs cover installation and upgrades of Rancher, troubleshooting and maintenance procedures as well as backup and restore of cluster configuration and resources.
@@ -19,5 +17,13 @@ If you find errors, bugs or missing information please help us improve our techl
 5. [Monitoring and Logging](labs/50_monitoringlogging.md)
 6. [Rancher App Catalog](labs/60_appcatalog.md)
 
-## Appendices
+## Additional Docs
 
+* [Rancher 2.x Docs](https://rancher.com/docs/rancher/v2.x/en/)
+* [RKE Docs](https://rancher.com/docs/rke/latest/en/)
+* [Kubernetes Docs](https://kubernetes.io/docs/home/?path=users&persona=app-developer&level=foundational)
+* [Helm Docs](https://docs.helm.sh/)
+
+## License
+
+This techlab is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](LICENSE) license.

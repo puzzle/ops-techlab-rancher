@@ -12,7 +12,7 @@ Select the node(s) and then click on de "Cordon" button.
 
 With kubectl use the following command to cordon the node
 
-```
+```bash
 kubectl cordon userX-k8snode3
 ```
 
@@ -24,7 +24,7 @@ By draining your node, you can remove all running pods on the selected node. Kub
 
 You can now upgrade your node using your existing maintance processess. 
 
-```
+```bash
 # Example
 yum update
 reboot
@@ -38,7 +38,7 @@ Select the node(s) and then click on de "Uncordon" button.
 
 With kubectl use the following command to cordon the node
 
-```
+```bash
 kubectl uncordon userX-k8snode3
 ```
 

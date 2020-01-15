@@ -9,7 +9,7 @@ We want to upgrade our existing Kubernetes which currently is on version v1.14.9
 
 Change your `rancher-cluster.yml` file to:
 
-```
+
 ```yaml
 nodes:
   - address: userX-rancher1.xip.puzzle.ch
@@ -27,13 +27,13 @@ kubernetes_version: "v1.16.3-rancher1-1"
 
 and then run `rke up` again:
 
-```
+```bash
 $ rke up --config ./rancher-cluster.yml
 ```
 
 After `rke` is done, verify your cluster:
 
-```
+```bash
 $ kubectl get nodes
 NAME                          STATUS    ROLES                      AGE       VERSION
 userX-rancher1.xip.puzzle.ch                Ready     controlplane,etcd,worker   11m       v1.16.3
@@ -43,8 +43,8 @@ userX-rancher3.xip.puzzle.ch               Ready     controlplane,etcd,worker   
 
 The update can take some minutes, so wait until you can access your Rancher cluster again. This update does also update the canal SDN. You make also sure, that these pods have been redeployed and are running and ready again:
 
-```
-kubectl get pod --all-namespaces 
+```bash
+$ kubectl get pod --all-namespaces 
 NAMESPACE       NAME                                       READY   STATUS      RESTARTS   AGE
 cattle-system   cattle-cluster-agent-c99d657f-7wmk2        1/1     Running     6          18m
 cattle-system   cattle-node-agent-267bp                    1/1     Running     4          18m

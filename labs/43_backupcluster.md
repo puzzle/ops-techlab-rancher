@@ -6,7 +6,7 @@ Rancher recommends configuring recurrent etcd snapshots for all production clust
 
 Check the [Rancher documentation](https://rancher.com/docs/rancher/v2.x/en/cluster-admin/backing-up-etcd/) for more details.
 
-## Configure recurring snapshots for the clister
+## Configure recurring snapshots for the cluster
 
 On the "Edit Cluster" Page at "Cluster Options" and "Show advanced options" you configure your recurring snapshot. As for your Rancher Control Plane Backup, this can also be a local backup, or directly uploaded to a S3 Bucket.
 
