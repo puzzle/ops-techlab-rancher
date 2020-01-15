@@ -9,9 +9,6 @@ Check the [Rancher Documentation](https://rancher.com/docs/rancher/v2.x/en/proje
 
 Only administrators, cluster owners or members, or project owners can configure project level monitoring. Project members can only view monitoring metrics.
 
-
-
-
 * From the Global view, navigate to the project that you want to configure project monitoring.
 * Select Tools > Monitoring in the navigation bar.
 * Select Enable to show the Prometheus configuration options. Enter in your desired configuration options.

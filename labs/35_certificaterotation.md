@@ -17,13 +17,13 @@ Certificates can be rotated for the following services:
 
 Rancher launched Kubernetes clusters have the ability to rotate the auto-generated certificates through the UI. You can rotate all your certificates using the Rancher Webgui.
 
-![Cordon Node](../resources/images/rotatecertificate.png)
+![Rotate certificate](../resources/images/rotatecertificate.png)
 
 And then you can select to rotate all certificates at once or only rotate indiviual
 
-![Cordon Node](../resources/images/rotatecertificatedialog.png)
+![Rotate certificate - all services](../resources/images/rotatecertificatedialog.png)
 
-Click on Save to rotate the certificates. Again, beaware, after the certificates are rotated, the Kubernetes components are automatically restarted. You should to this inside a maintenance window.
+Click on Save to rotate the certificates. Again, beaware, after the certificates are rotated, the Kubernetes components are automatically restarted. You should do this inside a maintenance window.
 
 
 **End of Lab 3.5**

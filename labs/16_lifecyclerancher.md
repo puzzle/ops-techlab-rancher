@@ -13,17 +13,25 @@ $ helm upgrade --install  \
   --namespace cattle-system \
   --set hostname=[IP of userX-lb].xip.puzzle.ch \
   --set ingress.tls.source=letsEncrypt \
-  --set letsEncrypt.email=ops-techlab-rancher@puzzle.ch
-  --version 2.3.3
-  rancher
-  rancher-latest/rancher:
+  --set letsEncrypt.email=ops-techlab-rancher@puzzle.ch \
+  --version 2.3.3 \
+  rancher \
+  rancher-latest/rancher
 
 ```
 
 Wait until rollout complets:
 
 ```
-$ kubectl -n cattle-system rollout status deploy/rancher
+$ kubectl -n cattle-system rollout status deploy/rancherWaiting for deployment "rancher" rollout to finish: 1 out of 3 new replicas have been updated...
+Waiting for deployment "rancher" rollout to finish: 1 out of 3 new replicas have been updated...
+Waiting for deployment "rancher" rollout to finish: 1 out of 3 new replicas have been updated...
+Waiting for deployment "rancher" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "rancher" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "rancher" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "rancher" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "rancher" rollout to finish: 1 old replicas are pending termination...
+deployment "rancher" successfully rolled out
 ```
 
 Open the Rancher Control Plane Url in your Browser and verify that it was upgraded to the new version.
