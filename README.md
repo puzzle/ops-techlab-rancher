@@ -28,7 +28,7 @@ If you find errors, bugs or missing information please help us improve our techl
 
 ## Contact & Training
 
-[Puzzle ITC](https://www.puzzle.ch) does offer this Rancher OPS techlab as a training with an experienced teacher and provisioned infrastructur for the lab environment. Contact Sebastian Plattner <plattner@puzzle.ch> for more details.
+[Puzzle ITC](https://www.puzzle.ch) does offer this Rancher OPS techlab as a training with an experienced teacher and provisioned infrastructur for the lab environment. Contact Sebastian Plattner <plattner+rancheropstechlab@puzzle.ch> for more details.
 
 ## License
 
