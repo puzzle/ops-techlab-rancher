@@ -11,7 +11,7 @@ For the installation of the Rancher Control Plane we need [RKE](https://rancher.
 
 #### Download RKE
 
-Open a Terminal in your web-based ide, or SSH into your userX-controller VM. You can download the [RKE Binary](https://github.com/rancher/rke/releases/tag/v1.0.0) from Github.
+Open a Terminal in your web-based IDE, or SSH into your userX-controller VM. You can download the [RKE Binary](https://github.com/rancher/rke/releases/tag/v1.0.0) from Github.
 
 Use the following commands:
 

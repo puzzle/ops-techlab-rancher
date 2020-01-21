@@ -41,7 +41,7 @@ userX-rancher2.xip.puzzle.ch              Ready     controlplane,etcd,worker   1
 userX-rancher3.xip.puzzle.ch               Ready     controlplane,etcd,worker   11m       v1.16.3
 ```
 
-The update can take some minutes, so wait until you can access your Rancher cluster again. This update does also update the canal SDN. You make also sure, that these pods have been redeployed and are running and ready again:
+The update can take some minutes, so wait until you can access your Rancher cluster again. This update does also update the canal SDN. Make also sure, that these pods have been redeployed and are running and ready again:
 
 ```bash
 $ kubectl get pod --all-namespaces 

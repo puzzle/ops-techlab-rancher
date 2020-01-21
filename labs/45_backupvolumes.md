@@ -11,7 +11,7 @@ Velero can use [restic](https://restic.net/) to create backups from your Periste
 
 In order to use velero with a S3 Backup, we first are going to install [Minio](https://min.io/). We are going to install Minio via the Rancher App Catalog. For minio to be available inside the Rancher App Catalog, we have to enable the helm catalog. Go to your Global Rancher View -> Tools -> Catalog and enable the `helm` catalog. Rancher does then sync all the helm charts. 
 
-![Sync  Rancher App Catalog](../resources/images/syncrancherappcatalog.pngg)
+![Sync  Rancher App Catalog](../resources/images/syncrancherappcatalog.png)
 
 Go to the App Catalog in your Kubernetes cluster and launch a new App. Search for minio.
 

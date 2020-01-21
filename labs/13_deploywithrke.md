@@ -55,9 +55,9 @@ userX-rancher3.xip.puzzle.ch               Ready     controlplane,etcd,worker   
 
 Make sure you keep a copy of the following files
 
-* rancher-cluster.yml: The RKE cluster configuration file.
-* kube_config_rancher-cluster.yml: The Kubeconfig file for the cluster, this file contains credentials for full access to the cluster.
-* rancher-cluster.rkestate: The Kubernetes Cluster State file, this file contains credentials for full access to the cluster.
+* `rancher-cluster.yml`: The RKE cluster configuration file.
+* `kube_config_rancher-cluster.yml`: The Kubeconfig file for the cluster, this file contains credentials for full access to the cluster.
+* `rancher-cluster.rkestate`: The Kubernetes Cluster State file, this file contains credentials for full access to the cluster.
 
 The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster.
 

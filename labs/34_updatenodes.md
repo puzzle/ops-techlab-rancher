@@ -4,11 +4,11 @@ In order to update kubernetes node, we need to make sure that no application wor
 
 ### Cordon a node
 
-Cordon a node makes the node unscheduable for kubernetes. You can do this inside your Rancher WebGUI or with kubectl.
+Cordon a node makes the node unscheduable for kubernetes. You can do this inside your Rancher WebGUI or with `kubectl`.
 
 ![Cordon Node](../resources/images/cordonnode.png)
 
-Select the node(s) and then click on de "Cordon" button.
+Select the node(s) and then click on de `Cordon` button.
 
 With kubectl use the following command to cordon the node
 
@@ -34,7 +34,7 @@ reboot
 
 Uncordon a node makes the node scheduable again for kubernetes. You can do this inside your Rancher WebGUI or with kubectl.
 
-Select the node(s) and then click on de "Uncordon" button.
+Select the node(s) and then click on de `Uncordon` button.
 
 With kubectl use the following command to cordon the node
 

@@ -5,11 +5,11 @@ In this lab we are going to install [Longhorn](https://github.com/longhorn/longh
 
 ## Install Project Longhorn using Rancher App Catalog
 
-Go to your system project and open the "Apps" page. Search for Longhorn and launce a new longhorn instance. You can leave all settings on default.
+Go to your system project and open the `Apps` page. Search for Longhorn and launce a new longhorn instance. You can leave all settings on default.
 
 ![Project Longhorn](../resources/images/applonghorn.png)
 
-As soon as your longhorn instance is "Active", you can open the longhorn webgui to see all nodes and volumes. There should be no volume at the moment.
+As soon as your longhorn instance is `Active`, you can open the longhorn webgui to see all nodes and volumes. There should be no volume at the moment.
 
 ![Project Longhorn - App](../resources/images/longhornready.png)
 
@@ -31,7 +31,7 @@ Create a new `test` volume with 1 GiB Size. In the Longhorn Webgui you should se
 
 ## Mount the volume inside a pod
 
-You can now create a new Pod and mount the volume. Create a new Deployment inside your default Namespace. Give it a name `test` and use the `busybox` container image. You can now select the already existing PVC under Volumes ("Add Volume" / "Use existing persistent volume") and select the previusly created PVC. You can mount the volume at `/mnt`. Launch de deployment and open a shell from the newly created pod to verify the mountpoint (e.g. `df -h`).
+You can now create a new Pod and mount the volume. Create a new Deployment inside your default Namespace. Give it a name `test` and use the `busybox` container image. You can now select the already existing PVC under Volumes (`Add Volume` / `Use existing persistent volume`) and select the previusly created PVC. You can mount the volume at `/mnt`. Launch de deployment and open a shell from the newly created pod to verify the mountpoint (e.g. `df -h`).
 
 ![Add Volume](../resources/images/mountvolume.png)
 

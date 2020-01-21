@@ -8,7 +8,7 @@ The Rancher WebGui does show you all Apps which can be upgraded.
 
 ![Upgrade App](../resources/images/upgradeapp.png)
 
-You can then click on the Yellow Button with the "Upgrade available" Message. Verify all values for the App (change if needed) and apply it. Rancher does then upgrade the app. As always, verify Changelog of the App to see what changed and if there are tasks to perform befor or after upgrading. Rancher App Catalog does only apply the new chart version and is not application aware!
+You can then click on the Yellow Button with the `Upgrade available` Message. Verify all values for the App (change if needed) and apply it. Rancher does then upgrade the app. As always, verify Changelog of the App to see what changed and if there are tasks to perform befor or after upgrading. Rancher App Catalog does only apply the new chart version and is not application aware!
 
 ---
 
