@@ -1,14 +1,15 @@
 ## Lab 3.4: Update Nodes
 
-In order to update kubernetes node, we need to make sure that no application workload is on the node and kubnernetes does not schedule any new pods on this node. Afterwards, updating a node is really part of the kubernetes daily business and should be handled by your existing processes. All kubernetes related components (except for the container runtime) is handled by Rancher.
+In order to update a Kubernetes node, we need to make sure that no application workload is running on this node and that Kubernetes does not schedule any new pods on this node. Afterwards, updating a node is really part of the Kubernetes daily business and should be handled by your existing processes. All Kubernetes related components (except for the container runtime) are handled by Rancher.
 
 ### Cordon a node
 
-Cordon a node makes the node unscheduable for kubernetes. You can do this inside your Rancher WebGUI or with `kubectl`.
+Cordoning a node makes it unschedulable for Kubernetes. This means that existing workload will remain running on the node, but no new pods will be scheduled there.
+You can do this inside your Rancher WebGUI or with `kubectl`.
 
 ![Cordon Node](../resources/images/cordonnode.png)
 
-Select the node(s) and then click on de `Cordon` button.
+Select the node(s) and then click on the `Cordon` button.
 
 With kubectl use the following command to cordon the node
 
@@ -18,7 +19,7 @@ kubectl cordon userX-k8snode3
 
 ### Drain a node
 
-By draining your node, you can remove all running pods on the selected node. Kubernetes will schedule the pods on other nodes and also does repect available [Pod Disruption Budgets](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#how-disruption-budgets-work). Assuming your workload is designed the way it should be, no interruption of service is expected.
+By draining your node, you can remove all running pods on the selected node. Kubernetes will schedule the pods on other nodes and also does respect available [Pod Disruption Budgets](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#how-disruption-budgets-work). Assuming your workload is designed the way it should be (see [The 12-Factor App](https://12factor.net/)), there is no interruption of service expected.
 
 ### Upgrade node
 
@@ -32,11 +33,11 @@ reboot
 
 ### Uncordon node
 
-Uncordon a node makes the node scheduable again for kubernetes. You can do this inside your Rancher WebGUI or with kubectl.
+Uncordoning a node makes it schedulable again for Kubernetes. You can do this inside your Rancher WebGUI or with kubectl.
 
-Select the node(s) and then click on de `Uncordon` button.
+Select the node(s) and then click on the `Uncordon` button.
 
-With kubectl use the following command to cordon the node
+With kubectl use the following command to uncordon the node
 
 ```bash
 kubectl uncordon userX-k8snode3

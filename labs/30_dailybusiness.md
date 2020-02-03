@@ -1,6 +1,6 @@
 # Lab 3: Daily Business
 
-This first chapter gives an overview of the Rancher Achritecture and how to install Rancher into your environment.
+This chapter gives an overview of the main day two operations.
 
 
 ## Chapter Content

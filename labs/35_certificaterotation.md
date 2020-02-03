@@ -1,6 +1,6 @@
 ## Lab 3.5: Certificate Rotation
 
-By default, Kubernetes clusters require certificates and Rancher launched Kubernetes clusters automatically generate certificates for the Kubernetes components. Rotating these certificates is important before the certificates expire as well as if a certificate is compromised. After the certificates are rotated, the Kubernetes components are automatically restarted. Check the [Rancher Documentation](https://rancher.com/docs/rancher/v2.x/en/cluster-admin/certificate-rotation/) for more details.
+By default, Kubernetes clusters require certificates and Rancher launched Kubernetes clusters automatically generate certificates for the Kubernetes components. Rotating these certificates is important before the certificates expire as well as if a certificate is compromised. Check the [Rancher Documentation](https://rancher.com/docs/rancher/v2.x/en/cluster-admin/certificate-rotation/) for more details.
 
 Certificates can be rotated for the following services:
 
@@ -19,14 +19,14 @@ Rancher launched Kubernetes clusters have the ability to rotate the auto-generat
 
 ![Rotate certificate](../resources/images/rotatecertificate.png)
 
-And then you can select to rotate all certificates at once or only rotate indiviual
+You can decide to rotate all certificates at once or only indiviual ones.
 
 ![Rotate certificate - all services](../resources/images/rotatecertificatedialog.png)
 
-Click on Save to rotate the certificates. The cluster will go into update mode, wait until the cluster is ready again.
+Click on `Save` to rotate the certificates. The cluster will go into update mode, where you have to wait until it is ready again.
 
 
-Beaware, after the certificates are rotated, the Kubernetes components are automatically restarted. You should do this inside a maintenance window.
+Be aware that after the certificates are rotated, the Kubernetes components are automatically restarted. You should do this within a maintenance window.
 
 
 

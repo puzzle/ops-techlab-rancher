@@ -8,7 +8,7 @@ Check the [Rancher documentation](https://rancher.com/docs/rancher/v2.x/en/admin
 
 ### Optional: Try an external Authentication
 
-You can try to enable [GitHub Authnentication](https://rancher.com/docs/rancher/v2.x/en/admin-settings/authentication/github/). Follow the documentation from Rancher.
+You can try to enable [GitHub Authentication](https://rancher.com/docs/rancher/v2.x/en/admin-settings/authentication/github/). Follow the documentation from Rancher.
 
 
 **End of Lab 3.1**

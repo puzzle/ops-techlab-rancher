@@ -1,6 +1,6 @@
 ## Lab 1.4: Install Rancher with Helm
 
-We now have a running kubernetes cluster and can deploy the Rancher Control Plane onto this cluster.
+We now have a running Kubernetes cluster and can deploy the Rancher Control Plane onto this cluster.
 
 ### Add the Helm Chart Repositories
 

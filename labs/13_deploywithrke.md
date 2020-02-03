@@ -61,7 +61,7 @@ Make sure you keep a copy of the following files
 
 The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster.
 
-Check that all pods are Running and ready:
+Check that all pods are running and ready:
 
 ```bash
 $ kubectl get pod --all-namespaces
