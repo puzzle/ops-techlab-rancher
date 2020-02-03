@@ -1,6 +1,6 @@
 # Lab 1: Warmup
 
-This first chapter gives an overview of the Rancher Achritecture and how to install Rancher into your environment.
+This first chapter gives an overview of the Rancher architecture and how to install Rancher into your environment.
 
 
 ## Chapter Content

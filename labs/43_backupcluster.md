@@ -2,7 +2,7 @@
 
 In the Rancher UI, etcd backup and recovery for Rancher launched Kubernetes clusters can be easily performed. Snapshots of the etcd database are taken and saved either locally onto the etcd nodes or to a S3 compatible target. The advantages of configuring S3 is that if all etcd nodes are lost, your snapshot is saved remotely and can be used to restore the cluster.
 
-Rancher recommends configuring recurrent etcd snapshots for all production clusters. Additionally, one-time snapshots can easily be taken as well.
+Rancher recommends configuring recurring etcd snapshots for all production clusters. Additionally, one-time snapshots can easily be taken as well.
 
 Check the [Rancher documentation](https://rancher.com/docs/rancher/v2.x/en/cluster-admin/backing-up-etcd/) for more details.
 

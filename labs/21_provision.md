@@ -15,7 +15,7 @@ Click on `Add Cluster` and select `From existing nodes (Custom)`
 
 Specify a name for your cluster: `ops-techlab`.
 
-In the `Cluster Options` / `Kubernetes Options` choose version `v1.15.6-rancher1-2` (as we want to upgrade later). Leave all the other options on default.
+In the `Cluster Options` / `Kubernetes Options` choose version `v1.15` (as we want to upgrade later). Leave all the other options on default.
 
 ![Rancher Cluster List](../resources/images/addcluster_options.png)
 
@@ -25,9 +25,11 @@ Click on the `Next` Button.
 
 Select all Node Roles, as for this ops-techlab we are not going to use dedicated master nodes.
 
-You can now use the show `docker run...` command to add your nodes to the Kubernetes Cluster.
+You can now use the `sudo docker run...` command to add your nodes to the Kubernetes Cluster.
 
 Login into your `userX-k8snode[1-2]` VMs and execute the docker command on each VM. Don't add `userX-k8snode3` yet, as we wanna add this node later.
+
+Then click on the `Done` Button. 
 
 Your cluster is now beeing provisioned. Observe the Messages show in the Rancher Control Plane and wait until you cluster is fully ready. This will take some minutes.
 

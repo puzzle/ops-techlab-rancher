@@ -4,21 +4,23 @@ Rancher relies on users and groups to determine who is allowed to log in to Ranc
 
 ### Adding local users
 
-Inside your Rancher Web Gui, on page users in the global view, click on "Add User". Set a username and password. 
+Inside your Rancher Web Gui, on page `Users` in the global view, click on `Add User`. Set a username and password. 
 ![Add User](../resources/images/adduser.png)
 
 The user shall be a "Standard user", later, we are going to assign this user to a project.
+
+Click `Create`.
 
 ![Add User](../resources/images/defineuser.png)
 
 
 ### Grant access to a project inside your cluster
 
-We are now going to assign the newly created user to a project inside your kubernetes cluster. From the dropdown, hover over your cluster and then select a project (e.g. default). Change to the "Members" Tab.
+We are now going to assign the newly created user to a project inside your Kubernetes cluster. From the dropdown, hover over your cluster and then select a project (e.g. default). Change to the `Members` tab.
 
 ![Project Members](../resources/images/projectmembers.png)
 
-Click on "Add Member" and search for your newly created user.
+Click on `Add Member` and search for your newly created user and then `Create`.
 
 ![Add Members](../resources/images/addmember.png)
 

@@ -1,17 +1,17 @@
 # Lab 4.1: Rancher Server Backup
 
-To backup your Rancher installation you have to take snapshots of your etcd database. You can use these snapshots later to recover from a disaster scenario. There are two ways to take snapshots: recurringly, or as a one-off. Each option is better suited to a specific use case. Read the short description below each link to know when to use each option.
+To backup your Rancher installation you have to take snapshots of your etcd database. You can use these snapshots later to recover from a disaster scenario. There are two ways to take snapshots: recurringly, or as a one-off. Each option is better suited to a specific use case. Read the short description below to know when to use each option.
 
-* Option A: Recurring Snapshots
+* Option A - Recurring Snapshots:
 After you stand up a high-availability Rancher install, we recommend configuring RKE to automatically take recurring snapshots so that you always have a safe restoration point available.
 
-* Option B: One-Time Snapshots
+* Option B - One-Time Snapshots:
 We advise taking one-time snapshots before events like upgrades or restoration of another snapshot.
 
 
 ## Enable recurring snapshots
 
-We are going to enable recuring snapshots on our kubernetes cluster. For this, change your `rancher-cluster.yml ` file and add the snapshot configuration. See [Rancher documentation](https://rancher.com/docs/rancher/v2.x/en/backups/backups/ha-backups/#option-a-recurring-snapshots) for more details.
+We are going to enable recurring snapshots on our Kubernetes cluster. For this, change your `rancher-cluster.yml` file and add the snapshot configuration. See [Rancher documentation](https://rancher.com/docs/rancher/v2.x/en/backups/backups/ha-backups/#option-a-recurring-snapshots) for more details.
 
 ```yaml
 nodes:

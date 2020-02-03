@@ -5,11 +5,11 @@ In this lab we are going to install [Longhorn](https://github.com/longhorn/longh
 
 ## Install Project Longhorn using Rancher App Catalog
 
-Go to your system project and open the `Apps` page. Search for Longhorn and launce a new longhorn instance. You can leave all settings on default.
+Go to your system project and open the `Apps` page and click `Launch`. Search for Longhorn and launch a new Longhorn instance. You can leave all settings on default.
 
 ![Project Longhorn](../resources/images/applonghorn.png)
 
-As soon as your longhorn instance is `Active`, you can open the longhorn webgui to see all nodes and volumes. There should be no volume at the moment.
+As soon as your Longhorn instance is `Active`, you can open its WebGUI, by clicking on `/index.html` to see all nodes and volumes. There should be no volume at the moment.
 
 ![Project Longhorn - App](../resources/images/longhornready.png)
 
@@ -17,11 +17,11 @@ As soon as your longhorn instance is `Active`, you can open the longhorn webgui 
 
 ## Create a new Persistent Volume Claim (PVC)
 
-Longhorn does also create a new Storage Class as marks it as the default storage class.
+Longhorn does also create a new Storage Class and marks it as the default storage class.
 
 ![Storage Class](../resources/images/storageclasslonghorn.png)
 
-For testing, we are going to create a new Volume. Go to the "Default" Project and open the page "Resources/Workload" and then switch to the "Volumes" tab. Click on add Volume.
+For testing purposes, we are going to create a new Volume. In the Rancher WebGUI go to the "Default" Project and open the page `Resources/Workload`. Then switch to the `Volumes` tab and click on `Add Volume`.
 
 ![Add Volume Claim](../resources/images/addvolume.png)
 
