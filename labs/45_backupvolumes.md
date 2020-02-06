@@ -121,7 +121,7 @@ metadata:
   name: sample
   namespace: foo
   annotations:
-    backup.velero.io/backup-volumes=pvc-volume
+    backup.velero.io/backup-volumes: pvc-volume
 spec:
   containers:
   - image: k8s.gcr.io/test-webserver
