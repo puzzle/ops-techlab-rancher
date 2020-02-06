@@ -17,9 +17,15 @@ With kubectl use the following command to cordon the node
 kubectl cordon userX-k8snode3
 ```
 
+**Note**: To use kubectl with the Kubernetes Cluster first source its Kubeconfig which can be found on the cluster dashboard in the top right corner. Paste the config in a file and source it with `export KUBECONFIG=$(pwd)/kube_config_ops-techlab-cluster.yml`.
+
 ### Drain a node
 
 By draining your node, you can remove all running pods on the selected node. Kubernetes will schedule the pods on other nodes and also does respect available [Pod Disruption Budgets](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#how-disruption-budgets-work). Assuming your workload is designed the way it should be (see [The 12-Factor App](https://12factor.net/)), there is no interruption of service expected.
+
+```bash
+kubectl drain userX-k8snode3
+```
 
 ### Upgrade node
 
