@@ -6,7 +6,7 @@
 
 * `app-readme.md`: A file that provides descriptive text in the chart’s UI header.
 * `questions.yml`: A file that contains questions for a form. These form questions simplify deployment of a chart. Without it, you must configure the deployment using key value pairs, which is more difficult.
-![questions](questions.png)
+![questions](../resources/images/questions.png)
 
 ## Create Rancher Chart
 

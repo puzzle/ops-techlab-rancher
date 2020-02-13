@@ -49,11 +49,11 @@ Now we are be able to deploy the our `mychart` Chart directly from our github re
 
 Go to _Cluster ops-techlab -> Default namespace -> Apps -> Launch_. If you see your own Chart from Github here all is working and we can deploy it.
 
-![github-mychart](github-mychart.png)
+![github-mychart](../resources/images/github-mychart.png)
 
 So we can create a Deployment of our `mychart` Chart and provide our question.
 
-![github-mychart-launch](github-mychart-launch.png)
+![github-mychart-launch](../resources/images/github-mychart-launch.png)
 
 ---
 
