@@ -28,7 +28,7 @@ http://5.102.146.40:30932
 
 If everything works fine an nginx server will be available under the listed URL `http://5.102.146.40:30932`.
 
-![nginx-helm](nginx-helm.png)
+![nginx-helm](../resources/images/nginx-helm.png)
 
 If we now have a look in the Rancher UI and navigate to our Cluster into the default namespace, we see that a new deployment called `foobar` has been created.
 
