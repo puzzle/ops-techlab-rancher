@@ -3,7 +3,7 @@
 
 ### Upgrade Rancher Control Plane 
 
-Initially we installed the Rancher Control Plane in Version 2.3.2 and we wan't to upgrade it now to version 2.3.3
+Initially we installed the Rancher Control Plane in Version 2.4.4 and we wan't to upgrade it now to version 2.4.5
 
 The upgrade is done using the same `helm` command as used during the installation of Rancher
 
@@ -14,7 +14,7 @@ $ helm upgrade --install  \
   --set hostname=[IP of userX-lb].xip.puzzle.ch \
   --set ingress.tls.source=letsEncrypt \
   --set letsEncrypt.email=ops-techlab-rancher@puzzle.ch \
-  --version 2.3.3 \
+  --version 2.4.5 \
   rancher \
   rancher-latest/rancher
 

@@ -11,12 +11,12 @@ For the installation of the Rancher Control Plane we need [RKE](https://rancher.
 
 #### Download RKE
 
-Open a Terminal in your web-based IDE, or SSH into your userX-controller VM. You can download the [RKE Binary](https://github.com/rancher/rke/releases/tag/v1.0.0) from Github.
+Open a Terminal in your web-based IDE, or SSH into your userX-controller VM. You can download the [RKE Binary](https://github.com/rancher/rke/releases/tag/v1.1.4) from Github.
 
 Use the following commands:
 
 ```
-wget https://github.com/rancher/rke/releases/download/v1.0.0/rke_linux-amd64
+wget https://github.com/rancher/rke/releases/download/v1.1.4/rke_linux-amd64
 chmod +x ./rke_linux-amd64 
 sudo mv rke_linux-amd64 /usr/local/bin/rke
 rke --version
@@ -24,13 +24,13 @@ rke --version
 
 #### Download Helm
 
-The [Helm binary](https://github.com/helm/helm/releases/tag/v3.0.0) can also be downloaded from Github:
+The [Helm binary](https://github.com/helm/helm/releases/tag/v3.2.4) can also be downloaded from Github:
 
 Use the following commands:
 
 ```
-wget https://get.helm.sh/helm-v3.0.0-linux-amd64.tar.gz
-tar xzf helm-v3.0.0-linux-amd64.tar.gz
+wget https://get.helm.sh/helm-v3.2.4-linux-amd64.tar.gz
+tar xzf helm-v3.2.4-linux-amd64.tar.gz
 sudo mv linux-amd64/helm /usr/local/bin/helm
 helm version
 ```

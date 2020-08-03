@@ -21,7 +21,7 @@ nodes:
     user: ansible
     role: [controlplane,worker,etcd]
 
-kubernetes_version: "v1.14.9-rancher1-1"
+kubernetes_version: "v1.17.9-rancher1-1"
 ```
 
 **Note:** Check `info.yml` in your techlab folder for the hostnames and IP's of your Rancher node.

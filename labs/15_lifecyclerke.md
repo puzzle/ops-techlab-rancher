@@ -5,7 +5,7 @@ Upgrade of a Kubernetes Cluster created by `rke` is as easy as changing the `kub
 
 ### Upgrade your Rancher Control Plane Kubernetes Cluster
 
-We want to upgrade our existing Kubernetes which currently is on version v1.14.9 to version v1.16.3.
+We want to upgrade our existing Kubernetes which currently is on version v1.17.9 to version v1.18.6.
 
 Change your `rancher-cluster.yml` file to:
 
@@ -22,7 +22,7 @@ nodes:
     user: centos
     role: [controlplane,worker,etcd]
 
-kubernetes_version: "v1.16.3-rancher1-1"
+kubernetes_version: "v1.18.6-rancher1-1"
 ```
 
 and then run `rke up` again:

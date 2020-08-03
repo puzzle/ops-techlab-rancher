@@ -15,13 +15,13 @@ $ helm repo update
 ### Install cert-manager
 
 ```bash
-$ kubectl apply -f https://raw.githubusercontent.com/jetstack/cert-manager/release-0.9/deploy/manifests/00-crds.yaml
+$ kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.16.0/cert-manager.crds.yaml
 $ kubectl create namespace cert-manager
 $ kubectl label namespace cert-manager certmanager.k8s.io/disable-validation=true
 $ helm install \
   cert-manager \
   --namespace cert-manager \
-  --version v0.9.1 \
+  --version v0.15.2 \
   jetstack/cert-manager
 ```
 
@@ -57,7 +57,7 @@ $ helm upgrade --install  \
   --set hostname=[IP of userX-lb].xip.puzzle.ch \
   --set ingress.tls.source=letsEncrypt \
   --set letsEncrypt.email=ops-techlab-rancher@puzzle.ch \
-  --version 2.3.2 \
+  --version 2.4.4 \
   rancher \
   rancher-latest/rancher
 
