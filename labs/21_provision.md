@@ -15,7 +15,7 @@ Click on `Add Cluster` and select `From existing nodes (Custom)`
 
 Specify a name for your cluster: `ops-techlab`.
 
-In the `Cluster Options` / `Kubernetes Options` choose version `v1.15` (as we want to upgrade later). Leave all the other options on default.
+In the `Cluster Options` / `Kubernetes Options` choose version `v1.17.9` (as we want to upgrade later). Leave all the other options on default.
 
 ![Rancher Cluster List](../resources/images/addcluster_options.png)
 

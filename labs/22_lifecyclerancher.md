@@ -8,13 +8,11 @@ Go to your cluster dashboard inside the Rancher web gui and edit the cluster.
 
 ![Edit Cluster](../resources/images/editcluster.png)
 
-From there, in the `Cluster Options` / `Kubernetes Options` select the new Kubernetes version you want to upgrade to (`v1.16`) and then click `Save`.
+From there, in the `Cluster Options` / `Kubernetes Options` select the new Kubernetes version you want to upgrade to (`v1.18.6`) and then click `Save`.
 
 ![Edit Cluster](../resources/images/changeclusterversion.png)
 
 Rancher does start the upgrade process and will replace all the Kubernetes componets with the updated version.
-
-**Note:** with version 2.3 of Rancher you do not have control over the upgrade process. Rancher does upgrade all master components and then the the worker nodes. Therefore an upgrade is not guaranteed to have zero downtime. On the [Roadmap of Rancher 2.4](https://github.com/rancher/rancher/wiki/Rancher-2.4) this behaviour should be improved.
 
 **Note:** Upgrading a Kubernetes version can also lead to the upgrade of addons like CNI, DNS etc. Always check the release notes and the [System Images](https://rancher.com/docs/rke/latest/en/config-options/system-images/) page or better [k8s_rke_system_images.go](https://github.com/rancher/kontainer-driver-metadata/blob/master/rke/k8s_rke_system_images.go) for details.
 
