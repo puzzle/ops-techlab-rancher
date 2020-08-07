@@ -15,13 +15,13 @@ $ helm install example mychart-0.1.0.tgz --set service.type=NodePort --set deplo
 
 ## Share it with git
 
-There acutally is a much simpler way to share your custom helm/rancher charts. It is possible to add it to github and install it from there.
+There actually is a much simpler way to share your custom Helm/Rancher charts. It is possible to add it to Github and install it from there.
 
-1. Initialize a new git repository inside the mychart chart.
+1. Initialize a new Git repository inside the mychart chart.
     ```bash
     $ git init
     ```
-2. Set the username and email for the git configuration.
+2. Set the username and email for the Git configuration.
     ```bash
     $ git config --global user.email "you@example.com"
     $ git config --global user.name "Your Name"
@@ -30,7 +30,7 @@ There acutally is a much simpler way to share your custom helm/rancher charts. I
     ```bash
     $ git add --all
     ```
-4. Commit all changes and push it to github.
+4. Commit all changes and push it to Github.
     ```bash
     $ git commit -m "Initial commit"
     $ git push origin master -f
@@ -38,20 +38,20 @@ There acutally is a much simpler way to share your custom helm/rancher charts. I
 
 ## Add the custom chart
 
-Add the github repo which contains the catalog.
-Add the catalog to rancher.
+Add the Github repo which contains the catalog.
+Add the catalog to Rancher.
 
 Global -> Tools -> Catalog -> Add Catalog.
 * **Name**: github-mychart
 * **Catalog Url**: \<github url\>
 
-Now we are be able to deploy the our `mychart` Chart directly from our github repository.
+Now we are able to deploy our `mychart` Chart directly from our Github repository.
 
 Go to _Cluster ops-techlab -> Default namespace -> Apps -> Launch_. If you see your own Chart from Github here all is working and we can deploy it.
 
 ![github-mychart](../resources/images/github-mychart.png)
 
-So we can create a Deployment of our `mychart` Chart and provide our question.
+So we can create a Deployment of our `mychart` chart and provide our answer.
 
 ![github-mychart-launch](../resources/images/github-mychart-launch.png)
 

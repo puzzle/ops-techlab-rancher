@@ -39,7 +39,7 @@ Run `rke up` to reconfigure your cluster.
 ```
 rke up --config ./rancher-cluster.yml
 ```
-Rancher does now create a etcd snapshot every 6 hours and saves it locally in the following directory: `/opt/rke/etcd-snapshots/`. From there you can use your existing backup solution. You can also configure Rancher to upload the etcd snapshots directly to an S3 Bucket.
+Rancher does now create a etcd snapshot every 6 hours and saves it locally in the following directory: `/opt/rke/etcd-snapshots/`. From there you can use your existing backup solution. You can also configure Rancher to upload the etcd snapshots directly to a S3 Bucket.
 
 
 ## One-Time Snapshots
@@ -53,7 +53,7 @@ The one-time snapshot is created with `rke`. Run the following command to create
 rke etcd snapshot-save --name <SNAPSHOT.db> --config rancher-cluster.yml
 ```
 
-Make sure to run the command in the same directory as your `rancher-cluster.yml` file. You find the snapshot again in directory: `/opt/rke/etcd-snapshots/`.
+Make sure to run the command in the same directory as your `rancher-cluster.yml` file. You find the snapshot again in directory: `/opt/rke/etcd-snapshots/` (on the rancher Kubernetes cluster nodes)
 
 **End of Lab 4.1**
 

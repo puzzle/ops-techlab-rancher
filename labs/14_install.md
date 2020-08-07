@@ -21,31 +21,32 @@ $ kubectl label namespace cert-manager certmanager.k8s.io/disable-validation=tru
 $ helm install \
   cert-manager \
   --namespace cert-manager \
-  --version v0.15.2 \
+  --version v0.16.0 \
   jetstack/cert-manager
 ```
 
 Verify with `kubectl -n cert-manager get all` that all the cert-manager pods are running and ready
 
 ```bash
-$kubectl -n cert-manager get all
+$ kubectl -n cert-manager get all
 NAME                                           READY   STATUS    RESTARTS   AGE
-pod/cert-manager-769498897f-2w7mz              1/1     Running   0          24s
-pod/cert-manager-cainjector-6cc6c4d64d-chxxt   1/1     Running   0          24s
-pod/cert-manager-webhook-75947c6ddc-wt5sg      1/1     Running   0          24s
+pod/cert-manager-749df5b4f8-9k9j8              1/1     Running   0          27s
+pod/cert-manager-cainjector-67b7c65dff-6v8fn   1/1     Running   0          27s
+pod/cert-manager-webhook-7d5d8f856b-l8rbr      1/1     Running   0          27s
 
-NAME                           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
-service/cert-manager-webhook   ClusterIP   10.43.158.235   <none>        443/TCP   24s
+NAME                           TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
+service/cert-manager           ClusterIP   10.43.58.247   <none>        9402/TCP   27s
+service/cert-manager-webhook   ClusterIP   10.43.24.64    <none>        443/TCP    27s
 
 NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/cert-manager              1/1     1            1           24s
-deployment.apps/cert-manager-cainjector   1/1     1            1           24s
-deployment.apps/cert-manager-webhook      1/1     1            1           24s
+deployment.apps/cert-manager              1/1     1            1           27s
+deployment.apps/cert-manager-cainjector   1/1     1            1           27s
+deployment.apps/cert-manager-webhook      1/1     1            1           27s
 
 NAME                                                 DESIRED   CURRENT   READY   AGE
-replicaset.apps/cert-manager-769498897f              1         1         1       24s
-replicaset.apps/cert-manager-cainjector-6cc6c4d64d   1         1         1       24s
-replicaset.apps/cert-manager-webhook-75947c6ddc      1         1         1       24s
+replicaset.apps/cert-manager-749df5b4f8              1         1         1       27s
+replicaset.apps/cert-manager-cainjector-67b7c65dff   1         1         1       27s
+replicaset.apps/cert-manager-webhook-7d5d8f856b      1         1         1       27s
 ```
 
 ### Install Rancher Control Plane

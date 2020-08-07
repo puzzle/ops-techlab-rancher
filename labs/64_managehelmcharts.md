@@ -2,7 +2,7 @@
 
 ## Install the Chart
 
-Now it is possible to install the helm chart directly from the directory on the `userX-controller` vm. Because we have added that question we also need to provide a value for it. That's why we pass `--set deploymenttitle=foobar` as an argument to the chart.
+Now it is possible to install the helm chart directly from the directory on the `userX-controller` VM. Because we have added that question we also need to provide a value for it. That's why we pass `--set deploymenttitle=foobar` as an argument to the chart.
 ```bash
 $ helm install example ./mychart --set service.type=NodePort --set deploymenttitle=foobar
 NAME: example
@@ -26,14 +26,14 @@ $ echo http://$NODE_IP:$NODE_PORT
 http://5.102.146.40:30932
 ```
 
-If everything works fine an nginx server will be available under the listed URL `http://5.102.146.40:30932`.
+If everything works fine a nginx server will be available under the listed URL `http://5.102.146.40:30932`.
 
 ![nginx-helm](../resources/images/nginx-helm.png)
 
-If we now have a look in the Rancher UI and navigate to our Cluster into the default namespace, we see that a new deployment called `foobar` has been created.
+If we now have a look in the Rancher UI and navigate to our clusters default Namespace, we see that a new Deployment called `foobar` has been created.
 
 ## List installed Charts
-We can see the installed Charts in our current namespace. To show installed helm charts from another namespaces specify the namespace with `-n <namespace>`.
+We can see the installed Charts in our current Namespace. To show installed Helm charts from another Namespaces specify the Namespace with `-n <namespace>`.
 ```bash
 $ helm list
 NAME   	NAMESPACE	REVISION	UPDATED                                	STATUS  	CHART        	APP VERSION

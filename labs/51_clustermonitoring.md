@@ -23,16 +23,19 @@ As an administrator or cluster owner, you can configure Rancher to deploy Promet
 
 * From the Global view, navigate to the cluster that you want to configure cluster monitoring.
 * Select "Tools" > "Monitoring" in the navigation bar. 
-* Select "Enable" to show the Prometheus configuration options. Review the resource consumption recommendations to ensure you have enough resources for Prometheus and on your worker nodes to enable monitoring. Enter in your desired configuration options.
-* Click Save.
+* Review the resource consumption recommendations to ensure you have enough resources for Prometheus and on your worker nodes to enable monitoring. Choose CPU and memory limits more alligned with to the official guideline (Prometheus: reservation 300, limit 500): https://rancher.com/docs/rancher/v2.x/en/cluster-admin/tools/monitoring/#resource-consumption
+
+![Monitoring Resource Limits](../resources/images/monitoringresourcelimits.png)
+
+* Select "Enable" to save and apply your configuration.
 
 ![Cluster Monitoring](../resources/images/enableclustermonitoring.png)
 
-As soon as all component for the cluster monitoring are deployed you can the metrics trought your cluster dashboard by clicking on the small grafana logos.
+As soon as all component for the cluster monitoring are deployed you can the metrics through your cluster dashboard by clicking on the small Grafana logos.
 
 ![Cluster Dashboard](../resources/images/clusterdashboardwithmonitoring.png)
 
-As after your initial deployment of the cluster monitoring, you don't have much data in your prometheus. Come back to the grafana dashboards after some minutes and explore them.
+Right after your initial Deployment of the cluster monitoring, you don't have much data in your Prometheus. Come back to the Grafana dashboards after some minutes and explore them.
 
 ![Grafana Dashboard](../resources/images/grafanadashboard.png)
 

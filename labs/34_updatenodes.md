@@ -5,7 +5,7 @@ In order to update a Kubernetes node, we need to make sure that no application w
 ### Cordon a node
 
 Cordoning a node makes it unschedulable for Kubernetes. This means that existing workload will remain running on the node, but no new pods will be scheduled there.
-You can do this inside your Rancher WebGUI or with `kubectl`.
+You can do this inside your Rancher web UI or with `kubectl`.
 
 ![Cordon Node](../resources/images/cordonnode.png)
 
@@ -17,7 +17,7 @@ With kubectl use the following command to cordon the node
 kubectl cordon userX-k8snode3
 ```
 
-**Note**: To use kubectl with the Kubernetes Cluster first source its Kubeconfig which can be found on the cluster dashboard in the top right corner. Paste the config in a file and source it with `export KUBECONFIG=$(pwd)/kube_config_ops-techlab-cluster.yml`.
+**Note**: To use kubectl with the Kubernetes cluster first source its Kubeconfig which can be found on the cluster dashboard in the top right corner. Paste the config in a file and source it with `export KUBECONFIG=$(pwd)/kube_config_ops-techlab-cluster.yml`.
 
 ### Drain a node
 
@@ -39,7 +39,7 @@ reboot
 
 ### Uncordon node
 
-Uncordoning a node makes it schedulable again for Kubernetes. You can do this inside your Rancher WebGUI or with kubectl.
+Uncordoning a node makes it schedulable again for Kubernetes. You can do this inside your Rancher web UI or with kubectl.
 
 Select the node(s) and then click on the `Uncordon` button.
 

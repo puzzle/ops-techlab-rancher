@@ -1,6 +1,6 @@
 ## Lab 2.1: Provision a new Kubernetes cluster
 
-In this lab we are going to provision a new [Custom Cluster](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/custom-clusters/) managed by the previously installed Rancher Control Plane
+In this lab we are going to provision a new [Custom Cluster](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/custom-clusters/) managed by the previously installed Rancher Control Plane.
 
 
 ### Add Cluster
@@ -27,13 +27,13 @@ Select all Node Roles, as for this ops-techlab we are not going to use dedicated
 
 You can now use the `sudo docker run...` command to add your nodes to the Kubernetes Cluster.
 
-Login into your `userX-k8snode[1-2]` VMs and execute the docker command on each VM. Don't add `userX-k8snode3` yet, as we wanna add this node later.
+Login into your `userX-k8snode[1-2]` VMs and execute the docker command on each VM. **Don't** add `userX-k8snode3` yet, as we wanna add this node later.
 
 Then click on the `Done` Button. 
 
 Your cluster is now beeing provisioned. Observe the Messages show in the Rancher Control Plane and wait until you cluster is fully ready. This will take some minutes.
 
-![Kubernetes Cluster rwady](../resources/images/cluster_ready.png)
+![Kubernetes Cluster ready](../resources/images/cluster_ready.png)
 
 
 **End of Lab 2.1**

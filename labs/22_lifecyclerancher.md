@@ -4,7 +4,7 @@ In this lab we are going to upgrade our recently created Kubernetes cluster to a
 
 ## Upgrade Cluster
 
-Go to your cluster dashboard inside the Rancher web gui and edit the cluster.
+Go to your cluster dashboard inside the Rancher web UI and edit the cluster.
 
 ![Edit Cluster](../resources/images/editcluster.png)
 

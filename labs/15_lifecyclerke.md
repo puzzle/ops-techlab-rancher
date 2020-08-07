@@ -36,40 +36,41 @@ After `rke` is done, verify your cluster:
 ```bash
 $ kubectl get nodes
 NAME                          STATUS    ROLES                      AGE       VERSION
-userX-rancher1.xip.puzzle.ch                Ready     controlplane,etcd,worker   11m       v1.16.3
-userX-rancher2.xip.puzzle.ch              Ready     controlplane,etcd,worker   11m       v1.16.3
-userX-rancher3.xip.puzzle.ch               Ready     controlplane,etcd,worker   11m       v1.16.3
+userX-rancher1.xip.puzzle.ch  Ready     controlplane,etcd,worker   11m       v1.18.6
+userX-rancher2.xip.puzzle.ch  Ready     controlplane,etcd,worker   11m       v1.18.6
+userX-rancher3.xip.puzzle.ch  Ready     controlplane,etcd,worker   11m       v1.18.6
 ```
 
 The update can take some minutes, so wait until you can access your Rancher cluster again. This update does also update the canal SDN. Make also sure, that these pods have been redeployed and are running and ready again:
 
 ```bash
-$ kubectl get pod --all-namespaces 
+$ kubectl get pod --all-namespaces
 NAMESPACE       NAME                                       READY   STATUS      RESTARTS   AGE
-cattle-system   cattle-cluster-agent-c99d657f-7wmk2        1/1     Running     6          18m
-cattle-system   cattle-node-agent-267bp                    1/1     Running     4          18m
-cattle-system   cattle-node-agent-2qnnc                    1/1     Running     4          18m
-cattle-system   cattle-node-agent-jcq5t                    1/1     Running     5          18m
-cattle-system   rancher-c57789b58-x25hz                    1/1     Running     3          21m
-cattle-system   rancher-c57789b58-xpqmm                    1/1     Running     3          21m
-cattle-system   rancher-c57789b58-xqt7r                    1/1     Running     3          21m
-cert-manager    cert-manager-769498897f-2w7mz              1/1     Running     1          24m
-cert-manager    cert-manager-cainjector-6cc6c4d64d-chxxt   1/1     Running     3          24m
-cert-manager    cert-manager-webhook-75947c6ddc-wt5sg      1/1     Running     1          24m
-ingress-nginx   default-http-backend-6ffd4cbc89-nl9zx      1/1     Running     1          29m
-ingress-nginx   nginx-ingress-controller-bcjjx             1/1     Running     1          29m
-ingress-nginx   nginx-ingress-controller-f96wm             1/1     Running     1          29m
-ingress-nginx   nginx-ingress-controller-hwhkd             1/1     Running     1          29m
-kube-system     canal-l4x9x                                2/2     Running     0          3m45s
-kube-system     canal-pdnh9                                1/2     Running     0          79s
-kube-system     canal-xrx87                                2/2     Running     0          2m25s
-kube-system     coredns-5c59fd465f-4ctxk                   1/1     Running     0          3m30s
-kube-system     coredns-autoscaler-d765c8497-jzrwl         1/1     Running     0          3m29s
-kube-system     metrics-server-64f6dffb84-6pvg9            1/1     Running     0          3m12s
-kube-system     rke-coredns-addon-deploy-job-qv5hm         0/1     Completed   0          3m35s
-kube-system     rke-ingress-controller-deploy-job-x6wbb    0/1     Completed   0          29m
-kube-system     rke-metrics-addon-deploy-job-pjbgt         0/1     Completed   0          3m19s
-kube-system     rke-network-plugin-deploy-job-bvqsg        0/1     Completed   0          3m51s
+cattle-system   cattle-cluster-agent-86485cbffb-zqwtc      1/1     Running     0          8m16s
+cattle-system   cattle-node-agent-csk92                    1/1     Running     0          8m15s
+cattle-system   cattle-node-agent-ftskx                    1/1     Running     0          8m15s
+cattle-system   cattle-node-agent-jhxxm                    1/1     Running     0          8m15s
+cattle-system   rancher-767cc6f696-c9bts                   1/1     Running     0          10m
+cattle-system   rancher-767cc6f696-h5g6w                   1/1     Running     0          10m
+cattle-system   rancher-767cc6f696-s94tc                   1/1     Running     0          10m
+cert-manager    cert-manager-69779b98cd-w7fgh              1/1     Running     0          12m
+cert-manager    cert-manager-cainjector-7c4c4bbbb9-qjr5x   1/1     Running     0          12m
+cert-manager    cert-manager-webhook-6496b996cb-tq87c      1/1     Running     0          12m
+ingress-nginx   default-http-backend-67cf578fc4-h6dfb      1/1     Running     0          16h
+ingress-nginx   nginx-ingress-controller-brqp2             1/1     Running     0          16h
+ingress-nginx   nginx-ingress-controller-gd8vm             1/1     Running     0          16h
+ingress-nginx   nginx-ingress-controller-q55jg             1/1     Running     0          16h
+kube-system     canal-82dkf                                2/2     Running     0          16h
+kube-system     canal-h8p26                                2/2     Running     0          16h
+kube-system     canal-xr65n                                2/2     Running     0          16h
+kube-system     coredns-849545576b-q8k9z                   1/1     Running     0          2m
+kube-system     coredns-849545576b-x4k8f                   1/1     Running     0          112s
+kube-system     coredns-autoscaler-65bfc8d47d-4vm9x        1/1     Running     0          16h
+kube-system     metrics-server-6b55c64f86-4rrt4            1/1     Running     0          16h
+kube-system     rke-coredns-addon-deploy-job-fcnfm         0/1     Completed   0          2m3s
+kube-system     rke-ingress-controller-deploy-job-sjq5b    0/1     Completed   0          16h
+kube-system     rke-metrics-addon-deploy-job-zlfft         0/1     Completed   0          16h
+kube-system     rke-network-plugin-deploy-job-z8x8r        0/1     Completed   0          16h
 ```
 
 ---

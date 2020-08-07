@@ -44,7 +44,7 @@ Add some text to the `app-readme.md` file.
 $ echo '# Simple NGINX APP!' > app-readme.md
 ```
 
-Also add some questions that should be promted on the WebUi when installing the rancher chart. Add the following content to `questions.yml`.
+Also add some questions that should be prompted on the web UI when installing the Rancher chart. Add the following content to `questions.yml`.
 ```yaml
 categories:
 - Web
