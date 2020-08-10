@@ -6,7 +6,7 @@ Our VMs already have Docker installed and the Loadalancer VM already have a runn
 
 ### Download RKE, Helm, kubectl
 
-For the installation of the Rancher Control Plane we need [RKE](https://rancher.com/docs/rke/latest/en/) and [Helm](https://helm.sh/). `kubectl` is used if you wan't to access your Kubernetes cluster from your console.
+For the installation of the Rancher Control Plane we need [RKE](https://rancher.com/docs/rke/latest/en/) and [Helm](https://helm.sh/). `kubectl` is used if you want to access your Kubernetes cluster from your console.
 
 
 #### Download RKE

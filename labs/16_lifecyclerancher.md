@@ -3,9 +3,9 @@
 
 ### Upgrade Rancher Control Plane 
 
-Initially we installed the Rancher Control Plane in Version 2.4.4 and we wan't to upgrade it now to version 2.4.5
+Initially we installed the Rancher Control Plane in version 2.4.4 and we want to upgrade it now to version 2.4.5.
 
-The upgrade is done using the same `helm` command as used during the installation of Rancher
+The upgrade is done using the same `helm` command as used during the installation of Rancher.
 
 
 ```
@@ -23,7 +23,8 @@ $ helm upgrade --install  \
 Wait until rollout complets:
 
 ```
-$ kubectl -n cattle-system rollout status deploy/rancherWaiting for deployment "rancher" rollout to finish: 1 out of 3 new replicas have been updated...
+$ kubectl -n cattle-system rollout status deploy/rancher
+Waiting for deployment "rancher" rollout to finish: 1 out of 3 new replicas have been updated...
 Waiting for deployment "rancher" rollout to finish: 1 out of 3 new replicas have been updated...
 Waiting for deployment "rancher" rollout to finish: 1 out of 3 new replicas have been updated...
 Waiting for deployment "rancher" rollout to finish: 2 out of 3 new replicas have been updated...
@@ -34,7 +35,7 @@ Waiting for deployment "rancher" rollout to finish: 1 old replicas are pending t
 deployment "rancher" successfully rolled out
 ```
 
-Open the Rancher Control Plane Url in your Browser and verify that it was upgraded to the new version.
+Open the Rancher Control Plane URL in your Browser and verify that it was upgraded to the new version.
 
 ---
 

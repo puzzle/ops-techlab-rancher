@@ -1,10 +1,10 @@
 ## Lab 3.2: User Management
 
-Rancher relies on users and groups to determine who is allowed to log in to Rancher and which resources they can access. When you configure an external authentication provider, users from that provider will be able to log in to your Rancher server. When a user logs in, the authentication provider will supply your Rancher server with a list of groups to which the user belongs.
+Rancher relies on users and groups to determine who is allowed to log into Rancher and which resources they can access. When you configure an external authentication provider, users from that provider will be able to log into your Rancher server. When a user logs in, the authentication provider will supply your Rancher server with a list of groups to which the user belongs.
 
 ### Adding local users
 
-Inside your Rancher Web Gui, on page `Users` in the global view, click on `Add User`. Set a username and password. 
+Inside your Rancher Web UI, on page `Users` in the global view, click on `Add User`. Set a username and password. 
 ![Add User](../resources/images/adduser.png)
 
 The user shall be a "Standard user", later, we are going to assign this user to a project.
@@ -24,7 +24,7 @@ Click on `Add Member` and search for your newly created user and then `Create`.
 
 ![Add Members](../resources/images/addmember.png)
 
-**Note:** if you enabled an external authentication in the previous lab, you can also chose your external user. For Github based users, they have to login once in order to be found.
+**Note:** If you enabled an external authentication in the previous lab, you can also chose your external user. For Github based users, they have to login once in order to be found.
 
 
 ### Login as new user

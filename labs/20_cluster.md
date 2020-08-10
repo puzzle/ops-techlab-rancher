@@ -12,7 +12,7 @@ In RKE clusters, Rancher manages the deployment of Kubernetes. These clusters ca
 
 These nodes can be dynamically provisioned through Rancher’s UI, which calls [Docker Machine](https://docs.docker.com/machine/) to launch nodes on various cloud providers.
 
-If you already have a node that you want to add to an RKE cluster, you can add it to the cluster by running a Rancher agent container on it.
+If you already have a node that you want to add to a RKE cluster, you can add it to the cluster by running a Rancher agent container on it.
 
 For more information, refer to the section on [RKE clusters](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/).
 

@@ -2,7 +2,7 @@
 
 The Rancher Control Plane itself runs on a Kubernetes Cluster. The first step therefore is creating a Kubernetes Cluster on the 3 `userX-rancher[1-3]` VMs.
 
-In this lab we are following the steps in [2. Install Kubernetes with RKE](https://rancher.com/docs/rancher/v2.x/en/installation/ha/kubernetes-rke/).
+In this lab we are following the steps in [2. Install Kubernetes with RKE](https://rancher.com/docs/rancher/v2.x/en/installation/k8s-install/kubernetes-rke/).
 
 
 ### Create `rancher-cluster.yml`
@@ -48,9 +48,9 @@ this should give you an output similar to:
 ```bash
 $ kubectl get nodes
 NAME                          STATUS    ROLES                      AGE       VERSION
-userX-rancher1.xip.puzzle.ch                Ready     controlplane,etcd,worker   11m       v1.14.9
-userX-rancher2.xip.puzzle.ch              Ready     controlplane,etcd,worker   11m       v1.14.9
-userX-rancher3.xip.puzzle.ch               Ready     controlplane,etcd,worker   11m       v1.14.9
+userX-rancher1.xip.puzzle.ch  Ready     controlplane,etcd,worker   11m       v1.17.9
+userX-rancher2.xip.puzzle.ch  Ready     controlplane,etcd,worker   11m       v1.17.9
+userX-rancher3.xip.puzzle.ch  Ready     controlplane,etcd,worker   11m       v1.17.9
 ``` 
 
 Make sure you keep a copy of the following files
@@ -66,20 +66,21 @@ Check that all pods are running and ready:
 ```bash
 $ kubectl get pod --all-namespaces
 NAMESPACE       NAME                                      READY   STATUS      RESTARTS   AGE
-ingress-nginx   default-http-backend-6ffd4cbc89-ndrnf     1/1     Running     0          41s
-ingress-nginx   nginx-ingress-controller-jknpr            1/1     Running     0          41s
-ingress-nginx   nginx-ingress-controller-tr7mt            1/1     Running     0          41s
-ingress-nginx   nginx-ingress-controller-x5rnx            1/1     Running     0          41s
-kube-system     canal-qsphv                               2/2     Running     0          58s
-kube-system     canal-svclr                               2/2     Running     0          58s
-kube-system     canal-z9hcp                               2/2     Running     0          58s
-kube-system     coredns-6998d84bf5-8gcb5                  1/1     Running     0          52s
-kube-system     coredns-autoscaler-f97674f9f-tx845        1/1     Running     0          51s
-kube-system     metrics-server-766f4fdf8d-8nmvq           1/1     Running     0          47s
-kube-system     rke-coredns-addon-deploy-job-xvvsw        0/1     Completed   0          54s
-kube-system     rke-ingress-controller-deploy-job-xmqtb   0/1     Completed   0          43s
-kube-system     rke-metrics-addon-deploy-job-885v7        0/1     Completed   0          49s
-kube-system     rke-network-plugin-deploy-job-kvhvp       0/1     Completed   0          64s
+ingress-nginx   default-http-backend-67cf578fc4-h6dfb     1/1     Running     0          2m55s
+ingress-nginx   nginx-ingress-controller-brqp2            1/1     Running     0          2m55s
+ingress-nginx   nginx-ingress-controller-gd8vm            1/1     Running     0          2m55s
+ingress-nginx   nginx-ingress-controller-q55jg            1/1     Running     0          2m55s
+kube-system     canal-82dkf                               2/2     Running     0          3m19s
+kube-system     canal-h8p26                               2/2     Running     0          3m19s
+kube-system     canal-xr65n                               2/2     Running     0          3m19s
+kube-system     coredns-7c5566588d-4js7x                  1/1     Running     0          2m17s
+kube-system     coredns-7c5566588d-hzkpv                  1/1     Running     0          3m12s
+kube-system     coredns-autoscaler-65bfc8d47d-4vm9x       1/1     Running     0          3m10s
+kube-system     metrics-server-6b55c64f86-4rrt4           1/1     Running     0          3m5s
+kube-system     rke-coredns-addon-deploy-job-7556p        0/1     Completed   0          3m14s
+kube-system     rke-ingress-controller-deploy-job-sjq5b   0/1     Completed   0          2m59s
+kube-system     rke-metrics-addon-deploy-job-zlfft        0/1     Completed   0          3m9s
+kube-system     rke-network-plugin-deploy-job-z8x8r       0/1     Completed   0          3m24s
 ```
 
 ---

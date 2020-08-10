@@ -8,7 +8,7 @@ Check the [Rancher documentation](https://rancher.com/docs/rancher/v2.x/en/clust
 
 ### Restore an etcd Snapshot
 
-A etcd snapshot can be restored via the Rancher web gui:
+A etcd snapshot can be restored via the Rancher web UI:
 
 ![Restore Snapshop](../resources/images/restoresnapshot.png)
 

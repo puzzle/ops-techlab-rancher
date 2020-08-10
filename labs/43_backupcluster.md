@@ -21,7 +21,7 @@ Inside the Rancher web gui on your cluster dashboard page, you can create an new
 
 ![Create Snapshop](../resources/images/createsnapshot.png)
 
-On the "tools/Snapshot" all existing etcd snapshots are listed:
+On the "Tools/Snapshot" all existing etcd snapshots are listed:
 
 ![etcd Snapshots](../resources/images/snapshotlist.png)
 
